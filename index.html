@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>STEALTH Case Notes</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="logo-container">
+        <img src="lpfr.png" alt="Logo" id="logo">
+    </div>
+
+    <div id="note-container">
+        <input type="text" id="employee-id-text" placeholder="Employee ID" maxlength="10">
+        <input type="hidden" id="dod-text" value="LPFR">
+        <input type="text" id="fms-text" placeholder="FMS Order" maxlength="10">
+        <input type="text" id="oms-text" placeholder="OMS" maxlength="20">
+        <textarea id="note-text" placeholder="Enter your notes here..."></textarea>
+        <button id="copy-button">Copy & Save</button>
+        <button id="save-button">Download Notes</button>
+    </div>
+
+    <div id="saved-notes-container">
+        <h2>Saved Notes</h2>
+        <div id="saved-notes"></div>
+    </div>
+
+    <footer id="page-footer">
+        <p>Created By Agent Livingston, Badge#137386 For LPFR (DoD).</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
