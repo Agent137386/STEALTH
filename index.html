@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>STEALTH Case Notes</title>
+    <title>Notes Page</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -12,8 +12,8 @@
     <div id="note-container">
         <input type="text" id="employee-id-text" placeholder="Employee ID" maxlength="10">
         <input type="hidden" id="dod-text" value="LPFR">
-        <input type="text" id="fms-text" placeholder="FMS Order" maxlength="10">
-        <input type="text" id="oms-text" placeholder="OMS" maxlength="20">
+        <input type="text" id="fms-text" placeholder="FMS Order" maxlength="20">
+        <input type="text" id="oms-text" placeholder="OMS" maxlength="35">
         <textarea id="note-text" placeholder="Enter your notes here..."></textarea>
         <button id="copy-button">Copy & Save</button>
         <button id="save-button">Download Notes</button>
@@ -22,10 +22,14 @@
     <div id="saved-notes-container">
         <h2>Saved Notes</h2>
         <div id="saved-notes"></div>
+        <a href="mailto:Agent137386@GeekSquad.com" class="feedback-button">Submit Feedback</a>
     </div>
 
     <footer id="page-footer">
-        <p>Created By Agent Livingston, Badge#137386 For LPFR (DoD).</p>
+        <p>Created By Agent Defender Livingston, Badge#137386 For LPFR (DoD) V1.4</p>
+        <br>
+        <p>All Code on this webpage is fully open source and stores zero data what so ever.
+        No assets used on this website are in any way obtained from Best Buy or Geek Squad.</p>
     </footer>
 
     <script src="script.js"></script>
