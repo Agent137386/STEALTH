@@ -14,6 +14,15 @@
         <input type="hidden" id="dod-text" value="LPFR">
         <input type="text" id="fms-text" placeholder="FMS Order" maxlength="20">
         <input type="text" id="oms-text" placeholder="OMS" maxlength="35">
+        
+        <!-- Radio buttons for call type -->
+        <div id="call-type-container">
+            <input type="radio" id="client-called" name="call-type" value="Client Called"><label for="client-called">Client Called</label>
+            <input type="radio" id="driver-called" name="call-type" value="Driver Called"><label for="driver-called">Driver Called</label>
+            <input type="radio" id="store-called" name="call-type" value="Store Called"><label for="store-called">Store Called</label>
+            <input type="radio" id="other-called" name="call-type" value="Other Called"><label for="other-called">Other Called</label>
+        </div>
+        
         <textarea id="note-text" placeholder="Enter your notes here..."></textarea>
         <button id="copy-button">Copy & Save</button>
         <button id="save-button">Download Notes</button>

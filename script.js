@@ -4,9 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
         var dodText = document.getElementById("dod-text").value;
         var fmsText = document.getElementById("fms-text").value;
         var omsText = document.getElementById("oms-text").value;
+        var callType = document.querySelector('input[name="call-type"]:checked')?.value || 'Call Type Not Selected';
         var notes = document.getElementById("note-text").value;
 
-        var textToCopy = `${employeeIdText}-${dodText}-${fmsText}-${omsText}-${notes}`;
+        var textToCopy = `${employeeIdText}-${dodText}-${fmsText}-${omsText}-${callType}-${notes}`;
         navigator.clipboard.writeText(textToCopy).then(() => {
             alert("Text copied to clipboard");
         });
@@ -54,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
         saveNoteButton.onclick = function() {
             newNote.contentEditable = "false";
             saveNoteButton.style.display = "none";
-            textToCopy = newNote.textContent;
+            textToCopy = newNote.textContent; // Note: This line should be updated to re-include the call type in `textToCopy` if you intend to allow re-saving edited notes with the call type.
         };
 
         noteAndTimestampContainer.appendChild(timestamp);
@@ -72,9 +73,11 @@ document.addEventListener("DOMContentLoaded", function() {
             savedNotesContainer.appendChild(newNoteContainer);
         }
 
+        // Clear inputs after saving
         document.getElementById("fms-text").value = "";
         document.getElementById("oms-text").value = "";
         document.getElementById("note-text").value = "";
+        document.querySelectorAll('input[name="call-type"]').forEach((elem) => elem.checked = false);
     });
 
     document.getElementById("save-button").addEventListener("click", function() {

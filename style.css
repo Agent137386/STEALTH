@@ -117,3 +117,13 @@ footer#page-footer {
 footer#page-footer p {
     margin: 0;
 }
+
+/* Added styles for call type container and labels */
+#call-type-container {
+    margin: 10px 0;
+}
+
+#call-type-container label {
+    margin-right: 10px;
+    color: black; /* Adjusts label color for visibility against the white background */
+}
